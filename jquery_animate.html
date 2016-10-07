@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<style>
+		span{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<span> </span>
+
+
+	<script>
+	var ShortSide = 100;
+	var LongSide = 600;
+	speed = 1000;
+
+	for(var i = 0; i < 10; i++){
+		$(document).ready(function(){
+
+			$("span").animate({
+				width: ShortSide + "px",
+				height:ShortSide + "px",
+				opacity:"1"}, speed);
+		
+			$("span").animate({
+				width:ShortSide + "px",
+				height:LongSide + "px",
+				opacity:"0.5"}, speed);
+
+			$("span").animate({
+				width:LongSide + "px",
+				height:LongSide + "px",
+				opacity:"1"}, speed);
+
+			$("span").animate({
+				width:LongSide + "px",
+				height:ShortSide + "px",
+				opacity:"0.5"}, speed);
+			
+			$("span").animate({
+				width: ShortSide + "px",
+				height:ShortSide + "px",
+				opacity:"1"}, speed);
+
+			LongSide = LongSide / 2;
+			ShortSide = ShortSide /2;
+			speed = speed / 2;
+
+		});
+	}
+
+	</script>
+</body>
+</html>
